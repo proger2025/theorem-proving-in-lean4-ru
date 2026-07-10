@@ -1,7 +1,6 @@
 [book]
 authors = ["proger2025"]
 language = "ru"
-multilingual = false
 src = "."
 title = "Theorem Proving in Lean 4 (Русский перевод)"
 
