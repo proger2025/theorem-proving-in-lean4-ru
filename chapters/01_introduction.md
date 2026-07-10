@@ -1,11 +1,20 @@
-# Глава 1: Введение
+# 1. Introduction
 
-Добро пожаловать в руководство по Lean 4! В этом разделе мы разберем основы.
+## 1.1. Computers and Theorem Proving
 
-## Первая проверка
+*Formal verification* involves the use of formal methods to prove the correctness of a program. 
+This is different from testing, which only checks a program's behavior on a limited set of inputs.
 
-Ниже приведен пример простейшего вычисления, которое мы запускали в редакторе:
+Lean is a functional programming language and an interactive theorem prover. 
+It allows you to write programs and mathematically prove that they satisfy their specifications.
 
 ```lean
-#eval 2 + 2
+theorem and_commutative (P Q : Prop) : P ∧ Q → Q ∧ P := by
+  intro h
+  cases h with
+  | intro hp hq =>
+    constructor
+    · exact hq
+    · exact hp
 ```
+
